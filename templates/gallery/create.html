@@ -1,0 +1,12 @@
+<head>
+    <title>GASNIG</title>
+</head>
+<body>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h1>Form</h1>
+        {{ form.as_p }}
+        <input type="submit" value="Göndər">
+    </form>
+    <a href="{% url 'home:home' %}">Əsas səhifəyə qayıt</a>
+</body>

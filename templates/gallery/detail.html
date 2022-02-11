@@ -1,0 +1,9 @@
+<head>
+    <title>GASNIG</title>
+</head>
+<body>
+    {{ post.title }}<br>
+    <img src="{{ post.image.url }}" class="img-responsive">
+    {{ post.publishing_date }}<br>
+    <a href="{{ post.get_delete_url }}" class="btn btn-danger" role="button">Sil</a>
+</body>

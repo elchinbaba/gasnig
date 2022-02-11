@@ -1,0 +1,17 @@
+<head>
+    <title>GASNIG</title>
+</head>
+<body>
+    <li><a href="{% url 'home:home' %}">Əsas səhifə</a></li>
+    <li><a href="{% url 'gallery:drawing' %}">Rəsmlər</a></li>
+    <li><a href="{% url 'gallery:design' %}">Dizaynlar</a></li>
+    <li><a href="{% url 'home:about' %}">Haqqımda</a></li>
+    <li><a href="{% url 'home:contact' %}">Əlaqə</a></li>
+    {% for post in posts %}
+        {{ post.title }}<br>
+        <img src="{{ post.image.url }}" class="img-responsive">
+        {{ post.publishing_date }}<br>
+        <a href="{{ post.get_absolute_url }}" class="btn btn-primary" role="button">Nəzər yetir</a>
+        <a href="{{ post.get_delete_url }}" class="btn btn-danger" role="button">Sil</a>
+    {% endfor %}
+</body>
